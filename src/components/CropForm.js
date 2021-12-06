@@ -65,7 +65,7 @@ const CropForm = () => {
                 },
                 body: JSON.stringify(cropInfo)
             }
-            const res = await fetch('/crop-predict', config);
+            const res = await fetch('https://whispering-wildwood-45465.herokuapp.com/crop-predict', config);
             const data = await res.json();
             setLoading(false);
             if(data.crop) {

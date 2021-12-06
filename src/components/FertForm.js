@@ -67,7 +67,7 @@ const FertForm = () => {
                 },
                 body: JSON.stringify(info)
             }
-            const resp = await fetch('/fertilizer-predict', config);
+            const resp = await fetch('https://whispering-wildwood-45465.herokuapp.com/fertilizer-predict', config);
             const data = await resp.json();
             setLoading(false);
             if (data.fert) {

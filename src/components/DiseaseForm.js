@@ -32,7 +32,7 @@ const DiseaseForm = () => {
         }
         try {
             setLoading(true);
-            const res = await fetch('/disease-predict', config);
+            const res = await fetch('https://whispering-wildwood-45465.herokuapp.com/disease-predict', config);
             const data = await res.json();
             setLoading(false);
             if(data.remedy) {
